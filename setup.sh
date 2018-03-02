@@ -19,6 +19,11 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
+#Add TeXstudio repository and install latex
+sudo apt install texlive-full
+sudo apt install texstudio
+sudo apt-get install texlive-lang-spanish
+
 #Add Java 9 Repository
 sudo add-apt-repository ppa:webupd8team/java
 
@@ -27,9 +32,12 @@ sudo apt-get update
 
 #Install all programs above
 sudo apt-get install google-chrome-stable -y
+sudo apt install flex -y
+sudo apt install bison -y
 sudo apt-get install telegram -y
 sudo apt-get install spotify-client -y
 sudo apt-get install sublime-text -y
+sudo apt-get install texstudio -y
 sudo apt-get install oracle-java9-installer -y
 
 #Setup Java enviornment
