@@ -24,8 +24,8 @@ sudo apt install texlive-full
 sudo apt install texstudio
 sudo apt-get install texlive-lang-spanish
 
-#Add Java 9 Repository
-sudo add-apt-repository ppa:webupd8team/java
+#Add Java 10 Repository
+sudo add-apt-repository ppa:linuxuprising/java
 
 #Update data of Repositories
 sudo apt-get update
@@ -38,13 +38,13 @@ sudo apt-get install telegram -y
 sudo apt-get install spotify-client -y
 sudo apt-get install sublime-text -y
 sudo apt-get install texstudio -y
-sudo apt-get install oracle-java9-installer -y
+sudo apt-get install oracle-java10-installer -y
 
 #Setup Java enviornment
-sudo apt-get install oracle-java9-set-default
+sudo apt-get install oracle-java10-set-default
 sudo cat >> /etc/environment <<EOL
-JAVA_HOME=/usr/lib/jvm/java-9-oracle
-JRE_HOME=/usr/lib/jvm/java-9-oracle/jre
+JAVA_HOME=/usr/lib/jvm/java-10-oracle
+JRE_HOME=/usr/lib/jvm/java-10-oracle/jre
 EOL
 
 #Cleaning files
