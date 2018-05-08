@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable -y
 sudo apt install flex -y
 sudo apt install bison -y
-sudo apt-get install telegram -y
+sudo apt-get install telegram-desktop -y
 sudo apt-get install spotify-client -y
 sudo apt-get install sublime-text -y
 sudo apt-get install texstudio -y
