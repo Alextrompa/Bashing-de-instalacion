@@ -1,3 +1,2 @@
-#Setup-Shell-Script
-# Setup-Shell-Script
-This is just my Shell Script to setup my Linux computer when I wipe the disk for a new distro or some bad things happens.
+# Mi Script de instalación de programas para Ubuntu
+Este es mi script de instalación para los programas que normalmente utilizo. Lo he creado a partir del script de colega Fedeparg.
