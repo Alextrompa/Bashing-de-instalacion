@@ -1,36 +1,47 @@
 #!/bin/bash -u
 
-#Get updates and upgrade all packages to the last version before install any other software
-sudo apt update
-sudo apt upgrade -y
+# Repositorio para Telegram
+sudo add-apt-repository ppa:atareao/telegram
 
-#Get Google Chrome Repository 
+# Repositorio para Spotify
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# Repositorio para Atom
+curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+
+# Repositorio para Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
-#Add Java 10 Repository
-sudo add-apt-repository ppa:linuxuprising/java
 
-#Update data of Repositories
-sudo apt-get update
+# Actualizar paquetes
+sudo apt update
+sudo apt -y upgrade
 
-#Install all programs above
-sudo apt-get install google-chrome-stable -y
-sudo apt install texlive-full
-sudo apt install texstudio
-sudo snap install telegram-desktop
-sudo snap install spotify
-sudo snap install sublime-text 
-sudo apt-get install oracle-java10-installer -y
 
-#Setup Java enviornment
-sudo apt-get install oracle-java10-set-default
-sudo cat >> /etc/environment <<EOL
-JAVA_HOME=/usr/lib/jvm/java-10-oracle
-JRE_HOME=/usr/lib/jvm/java-10-oracle/jre
-EOL
+# Instalar los programas
+sudo apt -y install google-chrome-stable
+sudo apt -y install texstudio texlive-lang-spanish texlive-latex-extra cm-super
+sudo apt -y install telegram
+sudo apt -y install spotify-client
+sudo apt -y install openjdk-9-dbg openjdk-9-jdk-headless openjdk-9-demo openjdk-9-jre openjdk-9-doc openjdk-9-source openjdk-9-jdk openjdk-9-jre-headless
+sudo apt -y install git gcc
+sudo apt -y install atom
 
-#Cleaning files
-sudo apt-get autoclean
+# Instalar GitKraken
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+dpkg -i gitkraken-amd64.deb
+rm gitkraken-amd64.deb
+
+# Instalar Discord
+wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+sudo dpkg -i discord.deb
+rm discord.deb
+
+
+# Limpieza de ficheros
 sudo apt autoclean
+sudo apt clean all
 sudo apt autoremove
