@@ -15,6 +15,10 @@ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
+# Repositorio para Visual Studio Code
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
 # Actualizar paquetes
 sudo apt update
@@ -28,7 +32,7 @@ sudo apt -y install telegram
 sudo apt -y install spotify-client
 sudo apt -y install openjdk-9-dbg openjdk-9-jdk-headless openjdk-9-demo openjdk-9-jre openjdk-9-doc openjdk-9-source openjdk-9-jdk openjdk-9-jre-headless
 sudo apt -y install git gcc
-sudo apt -y install atom
+sudo apt -y install atom code
 
 # Instalar GitKraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
