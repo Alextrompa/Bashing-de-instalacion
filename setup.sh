@@ -1,5 +1,8 @@
 #!/bin/bash -u
 
+# Instalar curl para poder añadir todos los repositorios (no viene por defecto en la instalación mínima de Ubuntu)
+sudo apt -y install curl
+
 # Repositorio para Telegram
 sudo add-apt-repository ppa:atareao/telegram
 
@@ -30,14 +33,11 @@ sudo apt -y install google-chrome-stable
 sudo apt -y install texstudio texlive-lang-spanish texlive-latex-extra cm-super
 sudo apt -y install telegram
 sudo apt -y install spotify-client
-sudo apt -y install openjdk-9-dbg openjdk-9-jdk-headless openjdk-9-demo openjdk-9-jre openjdk-9-doc openjdk-9-source openjdk-9-jdk openjdk-9-jre-headless
-sudo apt -y install git gcc
+sudo apt -y install openjdk-8-jre openjdk-8-jre-dcevm openjdk-8-dbg openjdk-8-jre-headless openjdk-8-demo openjdk-8-jre-zero openjdk-8-doc openjdk-8-source openjdk-8-jdk openjdk-8-jdk-headless
+sudo apt -y install git gcc g++ vim
 sudo apt -y install atom code
+sudo apt -y install libappindicator1 libc++1 libc++abi1 libindicator7
 
-# Instalar GitKraken
-wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
-dpkg -i gitkraken-amd64.deb
-rm gitkraken-amd64.deb
 
 # Instalar Discord
 wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
