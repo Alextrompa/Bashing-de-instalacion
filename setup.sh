@@ -34,6 +34,7 @@ sudo apt -y install spotify-client
 sudo apt -y install openjdk-8-jre openjdk-8-jre-dcevm openjdk-8-dbg openjdk-8-jre-headless openjdk-8-demo openjdk-8-jre-zero openjdk-8-doc openjdk-8-source openjdk-8-jdk openjdk-8-jdk-headless
 sudo apt -y install git gcc g++ vim
 sudo apt -y install atom code
+sudo apt -y install net-tools
 #Paquetes para GitKraken
 sudo apt -y install libgnome-keyring-common libgnome-keyring0
 #Paquetes para Discord
