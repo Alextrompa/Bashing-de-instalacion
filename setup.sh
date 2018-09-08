@@ -35,6 +35,7 @@ sudo apt -y install openjdk-8-jre openjdk-8-jre-dcevm openjdk-8-dbg openjdk-8-jr
 sudo apt -y install git gcc g++ vim
 sudo apt -y install atom code
 sudo apt -y install net-tools
+sudo apt -y install rar unrar
 #Paquetes para GitKraken
 sudo apt -y install libgnome-keyring-common libgnome-keyring0
 #Paquetes para Discord
