@@ -32,7 +32,7 @@ sudo apt -y install texstudio texlive-base texlive-lang-spanish texlive-latex-ex
 sudo apt -y install telegram-desktop
 sudo apt -y install spotify-client
 sudo apt -y install openjdk-8-jre openjdk-8-jre-dcevm openjdk-8-dbg openjdk-8-jre-headless openjdk-8-demo openjdk-8-jre-zero openjdk-8-doc openjdk-8-source openjdk-8-jdk openjdk-8-jdk-headless
-sudo apt -y install git gcc g++ vim make
+sudo apt -y install git gcc g++ vim make meld
 sudo apt -y install atom code
 sudo apt -y install net-tools
 sudo apt -y install rar unrar
