@@ -5,9 +5,9 @@ El repositorio original es este: https://github.com/Fedeparg/Setup-Shell-Script
 
 # Como utilizarlo
 1. Descarga el repositorio.
-git clone https://github.com/Alextrompa/Bashing-de-instalacion
+	- git clone https://github.com/Alextrompa/Bashing-de-instalacion
 2. Elige el fichero que más se parezca a tus necesidades.
 3. Ejecútalo.
-bash ubuntu.sh
+	- bash ubuntu.sh
 
 Tras estos pasos, todo debe haber ido correctamente
