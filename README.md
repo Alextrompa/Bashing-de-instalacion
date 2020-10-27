@@ -10,4 +10,4 @@ El repositorio original es este: https://github.com/Fedeparg/Setup-Shell-Script
 3. Ejecútalo.
 	- bash ubuntu.sh
 
-Tras estos pasos, todo debe haber ido correctamente
+Tras estos pasos, todo debe instalado correctamente.
