@@ -7,10 +7,6 @@ sudo apt -y install curl
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
-# Repositorio para Atom
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-
 # Repositorio para Visual Studio Code
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -20,14 +16,13 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.micr
 sudo apt update
 sudo apt -y upgrade
 
-
 # Instalar los programas
 sudo apt -y install texstudio texlive-base texlive-lang-spanish texlive-latex-extra cm-super
 sudo apt -y install telegram-desktop
 sudo apt -y install spotify-client
 sudo apt -y install openjdk-8-jre openjdk-8-jre-dcevm openjdk-8-dbg openjdk-8-jre-headless openjdk-8-demo openjdk-8-jre-zero openjdk-8-doc openjdk-8-source openjdk-8-jdk openjdk-8-jdk-headless
-sudo apt -y install git gcc g++ vim make meld
-sudo apt -y install atom code
+sudo apt -y install git gcc g++ vim make meld r-base
+sudo apt -y install code
 sudo apt -y install net-tools
 sudo apt -y install rar unrar
 #Paquetes para GitKraken
@@ -37,7 +32,7 @@ sudo apt -y install libappindicator1 libc++1 libc++abi1 libindicator7
 
 # Instalar Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt -y install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
 # Instalar GitKraken
@@ -50,6 +45,10 @@ wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=d
 sudo dpkg -i discord.deb
 rm discord.deb
 
+# Instalar RStudio
+wget -O rstudio.deb "https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb"
+sudo apt -y install ./rstudio.deb
+rm rstudio.deb
 
 # Limpieza de ficheros
 sudo apt autoclean

@@ -18,13 +18,6 @@ sudo dnf -y group upgrade --with-optional Multimedia
 #Añadimos el flathub a los repositorios de flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-#Añadimos el repositorio para Atom
-distro=/etc/fedora-release
-releasever=$(rpm -q --qf "%{version}" -f $distro)
-basearch=$(rpm -q --qf "%{arch}" -f $distro)
-sudo rpm --import https://packagecloud.io/AtomEditor/atom/gpgkey
-sudo sh -c 'echo -e "[Atom]\nname=Atom Editor\nbaseurl=https://packagecloud.io/AtomEditor/atom/el/7/\$basearch\nenabled=1\ngpgcheck=0\nrepo_gpgcheck=1\ngpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey" > /etc/yum.repos.d/atom.repo'
-
 #Añadimos el repositorio para Visual Studio Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
@@ -36,12 +29,8 @@ sudo dnf -y install hunspell-es-ES
 #Configuración para Google Chrome
 sudo dnf config-manager --set-enabled google-chrome
 
-#Lista de aplicaciones instaladas:
-#Python, Java, Atom, Google Chrome, Spotify, Discord, Make, Meld, LaTex, TexStudio, Vim
-#GitKraken, Qemu, VSCode
-
 #Instalamos las aplicaciones deseadas
-sudo dnf -y install python java-1.8.0-openjdk atom google-chrome-stable make meld vim qemu code gcc g++
+sudo dnf -y install python java-1.8.0-openjdk google-chrome-stable make meld vim qemu code gcc g++ R
 sudo dnf -y install texstudio texlive-base texlive-collection-latexextra texlive-glossaries-spanish texlive-collection-langspanish
 
 #Instalamos las aplicaciones deseadas
@@ -52,4 +41,11 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.rpm
 sudo rpm -i gitkraken-amd64.rpm
 rm gitkraken-amd64.rpm
 
+#RStudio
+wget -O rstudio.rpm "https://download1.rstudio.org/desktop/centos8/x86_64/rstudio-1.3.1093-x86_64.rpm"
+sudo dnf install -y ./rstudio.rpm
+rm rstudio.rpm
 
+#Limpieza de ficheros
+sudo dnf -y autoremove
+sudo dnf clean all
