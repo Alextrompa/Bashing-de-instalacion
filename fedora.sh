@@ -26,11 +26,8 @@ sudo dnf check-update
 #Descargamos el paquete de idiomas español
 sudo dnf -y install hunspell-es-ES
 
-#Configuración para Google Chrome
-sudo dnf config-manager --set-enabled google-chrome
-
 #Instalamos las aplicaciones deseadas
-sudo dnf -y install python java-1.8.0-openjdk google-chrome-stable make meld vim qemu code gcc g++ R
+sudo dnf -y install python java-1.8.0-openjdk make meld vim qemu code gcc g++ R telegram-desktop
 sudo dnf -y install texstudio texlive-base texlive-collection-latexextra texlive-glossaries-spanish texlive-collection-langspanish
 
 #Instalamos las aplicaciones deseadas
@@ -45,6 +42,11 @@ rm gitkraken-amd64.rpm
 wget -O rstudio.rpm "https://download1.rstudio.org/desktop/centos8/x86_64/rstudio-1.3.1093-x86_64.rpm"
 sudo dnf install -y ./rstudio.rpm
 rm rstudio.rpm
+
+#Google Chrome
+wget -O googlechrome.rpm "https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+sudo dnf install -y ./googlechrome.rpm
+rm googlechrome.rpm
 
 #Limpieza de ficheros
 sudo dnf -y autoremove
