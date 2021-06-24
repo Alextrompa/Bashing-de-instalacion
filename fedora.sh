@@ -27,12 +27,12 @@ sudo dnf check-update
 sudo dnf -y install hunspell-es-ES
 
 #Instalamos las aplicaciones deseadas
-sudo dnf -y install python java-1.8.0-openjdk make meld vim qemu code gcc g++ R telegram-desktop unrar
+sudo dnf -y install python java-1.8.0-openjdk make meld vim qemu code gcc g++ R unrar
 sudo dnf -y install rstudio-desktop
 sudo dnf -y install texstudio texlive-base texlive-collection-latexextra texlive-glossaries-spanish texlive-collection-langspanish
 
 #Instalamos las aplicaciones deseadas
-sudo flatpak install flathub com.spotify.Client com.discordapp.Discord
+sudo flatpak install flathub com.spotify.Client com.discordapp.Discord org.telegram.desktop
 
 #GitKraken
 wget https://release.gitkraken.com/linux/gitkraken-amd64.rpm
