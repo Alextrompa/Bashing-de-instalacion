@@ -1,3 +1,5 @@
+#!/bin/bash -u
+
 #Actualizamos todos los paquetes
 sudo dnf -y update
 
