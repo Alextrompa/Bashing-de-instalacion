@@ -24,13 +24,14 @@ Esto se debe a que vienen por defecto con la instalación básica del SO y no es
 - Net-Tools
 - OpenJDK 8 (Ubuntu y Fedora)
 - R
-- Rar
+- Rar (Fedora y Ubuntu)
 - Recursos Lingüísticos Abiertos del Español (Fedora y EndeavourOS)
 - RStudio
 - Spotify
 - Steam (EndeavourOS)
 - Telegram Desktop
-- Unrar
+- TexStudio
+- Unrar (Ubuntu y Fedora)
 - Vim
 - Visual Studio Code
 - Yay (EndeavourOS)

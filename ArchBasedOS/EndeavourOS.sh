@@ -3,19 +3,12 @@
 # Actualización de los paquetes
 sudo pacman -Syu
 
-
-
 # Instalación de programas via pacman
-sudo pacman -S curl wget gcc
-sudo pacman -S telegram-desktop
-sudo pacman -S hunspell-es_es
+sudo pacman -S curl wget gcc git make meld r hunspell-es_es steam telegram-desktop texstudio vim yay
+sudo pacman -S texlive
 
 # Instalación de programas via yay
-yay -S bitwarden discord_arch_electron
-
-
-
-
+yay -S bitwarden discord_arch_electron google-chrome rstudio-desktop spotify visual-studio-code-bin
 
 # Instalación de Albion Online
 albion=albion-installer
